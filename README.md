@@ -1,6 +1,6 @@
 
 ## What is it?
-- GitSearch is an Mobile App where you can easily find any github user or repository. Just type the username or repo name!!
+- GitSearch is an Mobile App where you can easily find any github user and see his/her profile. Just type the username !!
 
 ## Steps to run it 😎
 
