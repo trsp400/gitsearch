@@ -15,5 +15,11 @@
 ### Step 5
 - **If you're on IOS, you just need to type ```react-native run-ios``` and your emulator will open automatically.**
 
+## Step 6
+- **TÁ DÁ!! HERE'S THE APP**
+
+![](https://media2.giphy.com/media/QWA44zqyWSzqPiOvlS/giphy.gif)
+
+
 ## That's all for now folks! 🚀
 
