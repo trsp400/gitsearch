@@ -4,14 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
-<<<<<<< HEAD
 import com.reactnativecommunity.webview.RNCWebViewPackage;
-=======
-<<<<<<< HEAD
->>>>>>> c3bbae8c3c3a0e31969cb26785cd759c2f61a4d1
 import com.oblador.vectoricons.VectorIconsPackage;
-=======
->>>>>>> 140ad18a92726a101d459bdf4ae593d69c4c771a
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -19,7 +13,6 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import com.oblador.vectoricons.VectorIconsPackage;
-
 
 public class MainApplication extends Application implements ReactApplication {
 
