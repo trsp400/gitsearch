@@ -1,3 +1,4 @@
+
 ## What is it?
 - GitSearch is an Mobile App where you can easily find any github user or repository. Just type the username or repo name!!
 
@@ -15,3 +16,4 @@
 - **If you're on IOS, you just need to type ```react-native run-ios``` and your emulator will open automatically.**
 
 ## That's all for now folks! 🚀
+
