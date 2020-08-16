@@ -8,8 +8,11 @@ target 'gitsearch' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+<<<<<<< HEAD
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+=======
+>>>>>>> 140ad18a92726a101d459bdf4ae593d69c4c771a
   target 'gitsearchTests' do
     inherit! :complete
     # Pods for testing
