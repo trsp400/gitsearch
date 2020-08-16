@@ -8,10 +8,8 @@ import './config/ReactotronConfig';
 
 const App = () => (
   <NavigationContainer>
-    <PaperProvider>
-      <Routes />
-      <StatusBar backgroundColor="#6b49cb" />
-    </PaperProvider>
+    <Routes />
+    <StatusBar backgroundColor="#6b49cb" />
   </NavigationContainer>
 );
 

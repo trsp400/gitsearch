@@ -3,14 +3,16 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'gitsearch' do
+target 'GitSearch' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'gitsearchTests' do
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
+  target 'GitSearchTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -25,10 +27,10 @@ target 'gitsearch' do
   end
 end
 
-target 'gitsearch-tvOS' do
-  # Pods for gitsearch-tvOS
+target 'GitSearch-tvOS' do
+  # Pods for GitSearch-tvOS
 
-  target 'gitsearch-tvOSTests' do
+  target 'GitSearch-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

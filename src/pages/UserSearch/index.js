@@ -1,7 +1,6 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Container,
-  Title,
   SearchButton,
   SearchUser,
   Search,
@@ -25,7 +24,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-community/async-storage';
 import api from '../../services/api';
 
-const UserSearch = () => {
+const UserSearch = ({navigation}) => {
   const [users, setUsers] = useState([]);
   const [stateUsers, setStateUsers] = useState([]);
   const [search, setSearch] = useState('');
@@ -141,7 +140,12 @@ const UserSearch = () => {
             keyExtractor={(user) => user.login}
             renderItem={({item}) => (
               <User>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate('UserProfile', {
+                      uri: `https://github.com/${item.login}`,
+                    })
+                  }>
                   <AvatarImage source={{uri: item.avatar}} />
                 </TouchableOpacity>
 
@@ -153,7 +157,14 @@ const UserSearch = () => {
                 </Bio>
 
                 <Buttons>
-                  <ProfileButton title="Ver Perfil" />
+                  <ProfileButton
+                    title="Ver Perfil"
+                    onPress={() =>
+                      navigation.navigate('UserProfile', {
+                        uri: `https://github.com/${item.login}`,
+                      })
+                    }
+                  />
                   <DeleteUser
                     icon={() => <Icon name="close" size={20} color="#FF6347" />}
                     onPress={() => deleteUser(item.login)}
