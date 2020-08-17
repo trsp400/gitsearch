@@ -35,16 +35,11 @@ const UserSearch = ({navigation}) => {
       return users.login !== login;
     });
     setUsers(newArrayUsers);
-    // users.forEach((item, index) => {
-    //   console.log(index + ' => ' + item.login);
-    // });
-    console.log(newArrayUsers);
-    // Alert.alert(login);
+    saveToStorage(newArrayUsers);
   };
 
   const saveToStorage = async (data) => {
     await AsyncStorage.setItem('users', JSON.stringify(data));
-    // console.tron.log(data);
   };
 
   const handleSubmit = async () => {
@@ -85,8 +80,6 @@ const UserSearch = ({navigation}) => {
   };
 
   useEffect(() => {
-    console.tron.log(users);
-    // AsyncStorage.clear();
     if (users.length > 1) {
       saveToStorage(users);
     }
@@ -96,14 +89,12 @@ const UserSearch = ({navigation}) => {
     const retrieveUsers = async () => {
       await AsyncStorage.getItem('users')
         .then((res) => {
-          // console.tron.log(res);
           if (res) {
-            console.log(JSON.parse(res));
             setUsers(JSON.parse(res));
           }
         })
         .catch((err) => {
-          console.tron.log(err);
+          throw new Error(err);
         });
     };
     retrieveUsers();
